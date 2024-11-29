@@ -27,13 +27,13 @@ import {
 } from '@/components/ui/Select'
 
 const errorTypes = [
-  { value: 'delivery_delay', label: 'Delivery Delay' },
-  { value: 'wrong_order', label: 'Wrong Order' },
-  { value: 'missing_items', label: 'Missing Items' },
-  { value: 'payment_issue', label: 'Payment Issue' },
-  { value: 'quality_issue', label: 'Quality Issue' },
-  { value: 'system_error', label: 'System Error' },
-  { value: 'other', label: 'Other' }
+  { value: 'delivery_delay', label: 'Retraso en la Entrega' },
+  { value: 'wrong_order', label: 'Orden Incorrecta' },
+  { value: 'missing_items', label: 'Artículos Faltantes' },
+  { value: 'payment_issue', label: 'Problema de Pago' },
+  { value: 'quality_issue', label: 'Problema de Calidad' },
+  { value: 'system_error', label: 'Error del Sistema' },
+  { value: 'other', label: 'Otro' }
 ] as const
 
 const formSchema = z.object({

@@ -37,9 +37,9 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>
 
 const paymentMethods = [
-  { value: 'cash', label: 'Cash' },
-  { value: 'credit_card', label: 'Credit Card' },
-  { value: 'debit_card', label: 'Debit Card' },
+  { value: 'cash', label: 'Pago en contraentrega' },
+  { value: 'credit_card', label: 'Tarjeta de Credito' },
+  { value: 'debit_card', label: 'Tarjeta Debito' },
   { value: 'yape', label: 'Yape' }
 ]
 
@@ -65,7 +65,7 @@ export default function UserDataForm() {
   return (
     <main className='mx-auto max-w-2xl pt-8'>
       <h1 className='mb-8 text-center text-4xl font-bold'>
-        Personal Information
+        Ingresar datos personales
       </h1>
 
       <Form {...form}>
@@ -76,7 +76,7 @@ export default function UserDataForm() {
               name='firstName'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>First Name</FormLabel>
+                  <FormLabel>Nombres</FormLabel>
                   <FormControl>
                     <Input placeholder='John' {...field} />
                   </FormControl>
@@ -90,7 +90,7 @@ export default function UserDataForm() {
               name='lastName'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel>Apellidos</FormLabel>
                   <FormControl>
                     <Input placeholder='Doe' {...field} />
                   </FormControl>
@@ -123,7 +123,7 @@ export default function UserDataForm() {
             name='phoneNumber'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel>Telefono</FormLabel>
                 <FormControl>
                   <Input type='tel' placeholder='987654321' {...field} />
                 </FormControl>
@@ -137,7 +137,7 @@ export default function UserDataForm() {
             name='paymentMethod'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Payment Method</FormLabel>
+                <FormLabel>Metodo de pago</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -161,7 +161,7 @@ export default function UserDataForm() {
           />
 
           <Button type='submit' className='w-full'>
-            Continue to Payment
+            Continuar
           </Button>
         </form>
       </Form>
